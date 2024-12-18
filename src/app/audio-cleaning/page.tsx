@@ -1,11 +1,16 @@
-import React from 'react'
+import Link from "next/link";
 
-function page() {
+function Header() {
   return (
-    <div>
-      Audio Cleaning 
-    </div>
-  )
+    <header>
+      <nav>
+        <ul>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/audio-cleaning">Audio Cleaning</Link></li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
 
-export default page
+export default Header;
