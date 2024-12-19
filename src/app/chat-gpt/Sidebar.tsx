@@ -3,9 +3,13 @@
 import React from 'react';
 import { FaHome, FaUser, FaCog, FaBandcamp } from 'react-icons/fa';
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  className?: string;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   return (
-    <div className="w-64 bg-gray-950 text-white flex flex-col justify-between">
+    <div className={`w-64 bg-gray-950 text-white flex flex-col justify-between ${className}`}>
       <div className="flex-1 p-4">
         <ul className="space-y-2">
           <li>
