@@ -5,7 +5,7 @@ import { FaHome, FaUser, FaCog, FaBandcamp } from 'react-icons/fa';
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="w-64 bg-gray-950 text-white flex flex-col">
+    <div className="w-64 bg-gray-950 text-white flex flex-col justify-between">
       <div className="flex-1 p-4">
         <ul className="space-y-2">
           <li>
@@ -27,23 +27,23 @@ const Sidebar: React.FC = () => {
             </a>
             <ul>
               <li>
-                <a href="#" className="flex items-center p-3 rounded-lg hover:bg-white hover:text-black">
+                <a href="#" className="flex items-center p-2 rounded-lg hover:bg-white hover:text-black">
                   <FaUser className="mr-3" />
                   <span>Accounts</span>
                 </a>
               </li>
             </ul>
           </li>
-          <li>
-            <a
-              href="#"
-              className="fixed bottom-0 flex items-center pl-3 pr-10 py-2 w-auto mb-2.5 rounded-lg hover:bg-white hover:text-black"
-            >
-              <FaBandcamp className="mr-3" />
-              <span>Logout</span>
-            </a>
-          </li>
         </ul>
+      </div>
+      <div className="p-4">
+        <a
+          href="#"
+          className="flex items-center p-2 rounded-lg hover:bg-white hover:text-black"
+        >
+          <FaBandcamp className="mr-3" />
+          <span>Logout</span>
+        </a>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaHome, FaUser, FaCog, FaBandcamp, FaAlignRight } from "react-icons/fa";
+import { FaHome, FaUser, FaCog, FaBandcamp } from "react-icons/fa";
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -19,7 +19,7 @@ const Sidebar: React.FC = () => {
         className="absolute top-4 right-[-1.5rem] bg-gray-800 text-white p-2 rounded-full shadow-md focus:outline-none"
         onClick={toggleSidebar}
       >
-        <FaAlignRight />
+        <img src="/sidebar.png" alt="Toggle Sidebar" className="w-6 h-6" />
       </button>
 
       {/* Sidebar Content */}

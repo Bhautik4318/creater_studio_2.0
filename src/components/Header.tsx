@@ -4,10 +4,10 @@ import React from "react";
 
 export default function Header() {
   return (
-    <header className="px-4  mt-4 lg:px-6 h-14 flex items-center justify-center">
+    <header className="sticky top-0 px-4 py-5 lg:px-6 h-14 flex items-center justify-center bg-black z-10 mt-2.5 mb-2.5">
       <Link
         href="/"
-        className="flex items-center justify-center"
+        className="flex items-center justify-center py-10 px-4 rounded-3xl text-black"
         prefetch={false}
       >
         <BrushIcon />
