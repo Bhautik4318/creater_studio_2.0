@@ -29,6 +29,12 @@ const HeroSection = () => {
             >
               Try ChatGPT
             </Link>
+            <Link 
+              href="/audio-cleaning"
+              className="inline-flex h-9 items-center justify-center rounded-3xl border border-white bg-background px-4 py-2 text-sm font-medium shadow-lg transition-colors hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring "
+            >
+              Try Audio Cleaning
+            </Link>
           </div>
         </div>
       </div>
