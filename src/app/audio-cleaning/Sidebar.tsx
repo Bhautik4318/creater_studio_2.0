@@ -9,7 +9,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   return (
-    <div className={`w-64 bg-gray-950 text-white flex flex-col justify-between ${className}`}>
+    <div className="w-64 bg-gray-950 text-white flex flex-col justify-between">
       <div className="flex-1 p-4">
         <ul className="space-y-2">
           <li>
@@ -31,7 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
             </a>
             <ul>
               <li>
-                <a href="#" className="flex items-center p-2 rounded-lg hover:bg-white hover:text-black">
+                <a href="#" className="flex items-center mt-1.5 p-2 rounded-lg hover:bg-white hover:text-black">
                   <FaUser className="mr-3" />
                   <span>Accounts</span>
                 </a>
