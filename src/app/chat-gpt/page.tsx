@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import sidebarIcon from '/public/icons8-sidebar-24.png';
 
 const Page: React.FC = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
@@ -18,16 +20,20 @@ const Page: React.FC = () => {
       <div className="flex flex-1">
         {isSidebarVisible && <Sidebar />}
         <div className='bg-gray-100 flex-1'>
-          <button
-            onClick={toggleSidebar}
-            className="p-2 bg-gray-100 text-black rounded-lg hover:bg-gray-500 hover:text-white m-4 w-8 h-8 flex items-center justify-center md:hidden"
-          >
-            <img src="/icons8-sidebar-24.png" alt="Toggle Sidebar" className="w-6 h-6" />
-          </button>
+          <div className="flex justify-end">
+            <button
+              onClick={toggleSidebar}
+              className="p-2 bg-gray-100 text-black rounded-lg hover:bg-gray-500 hover:text-white m-4 w-8 h-8 flex items-center justify-center md:hidden"
+            >
+              <Image src={sidebarIcon} alt="Toggle Sidebar" width={24} height={24} />
+            </button>
+          </div>
           <ChatArea />
         </div>
       </div>
     </div>
   );
 };
+
+export default dynamic(() => Promise.resolve(Page), { ssr: false });
 
